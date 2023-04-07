@@ -36,7 +36,6 @@ function populateForm() {
     if (savedForm) {
      
         const parsetLocalStorage = JSON.parse(savedForm);
-        console.log(parsetLocalStorage);
 
         const email = parsetLocalStorage.email;
         const message = parsetLocalStorage.message;
