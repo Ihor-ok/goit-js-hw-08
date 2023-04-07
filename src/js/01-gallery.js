@@ -26,3 +26,5 @@ function createGalleryCardMarkup(galleryItems) {
 
 var lightbox = new SimpleLightbox('.gallery a', {});
 console.log(galleryItems);
+console.log('Test1');
+
