@@ -10,20 +10,16 @@ player.on('timeupdate', throttle(function (data) {
     let timeFoLocalStorege = data.seconds;
     addLocalStorage(timeFoLocalStorege);
     
-}, 2000));
+}, 2000, { 'trailing' : false }));
 
-// player.on('ended', function () {
-//     removeLocalStorage();
-// });
-
+player.on('ended', function () {
+   removeLocalStorage();
+});
 
 const addLocalStorage = function (currentTime) {
     localStorage.setItem('videoplayer-current-time', String(currentTime));
-    // console.log('Test1');
 };
 
-// const removeLocalStorage = function () {
-//     player.off('timeupdate');
-//     localStorage.removeItem('videoplayer-current-time');
-//     console.log('Test2');
-// };
+const removeLocalStorage = function () {
+    localStorage.removeItem('videoplayer-current-time');
+};
