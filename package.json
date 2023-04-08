@@ -5,6 +5,8 @@
   "homepage": "https://ihor-ok.github.io/goit-js-hw-08",
   "scripts": {
     "start": "parcel src/*.html",
+    "predeploy": "npm run duild",
+    "deploy": "gp-pages -d build",
     "build": "parcel build src/*.html --public-url /goit-js-hw-08/"
   },
   "repository": {
